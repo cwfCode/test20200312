@@ -11,7 +11,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tmxmall/connector/controller/TestController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="491">
@@ -19,6 +19,15 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tmxmall/connector/ConnectorServerApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="8" column="37" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -121,8 +130,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/tmxmall/connector/util/ScheduleUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tmxmall/connector/dal/entity/FileInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tmxmall/connector/util/JacksonUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tmxmall/connector/controller/TestController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tmxmall/connector/controller/TestController.java" />
       </list>
     </option>
   </component>
@@ -229,6 +238,28 @@
               <item name="connector-server" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="tmxmall" type="462c0819:PsiDirectoryNode" />
+              <item name="connector" type="462c0819:PsiDirectoryNode" />
+              <item name="connectorfile" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="connector-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="connector-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="tmxmall" type="462c0819:PsiDirectoryNode" />
+              <item name="connector" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="connector-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="connector-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -246,7 +277,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1615543100054" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1615548370762" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -264,11 +295,11 @@
       <recent name="com.tmxmall.connector.dao.entity" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\connector-server\src\main\java\com\tmxmall\connector\connectorfile" />
       <recent name="E:\connector-server\src\main\java\com\tmxmall\connector\dal\dao" />
       <recent name="E:\connector-server\src\main\resources\mapper" />
       <recent name="E:\connector-server\src\main\java\com\tmxmall\connector\dao\mapper" />
       <recent name="E:\connector-server\src\main\java\com\tmxmall\connector\model" />
-      <recent name="E:\connector-server\src\main\java\com\tmxmall\connector\dao\entity" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -351,12 +382,12 @@
       <workItem from="1615204379952" duration="7030000" />
       <workItem from="1615290066322" duration="2879000" />
       <workItem from="1615358272350" duration="4727000" />
-      <workItem from="1615542769272" duration="272000" />
+      <workItem from="1615542769272" duration="950000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79590000" />
+    <option name="totallyTimeSpent" value="80268000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -370,7 +401,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32962137" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.2580645" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.38709676" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -655,13 +686,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tmxmall/connector/ConnectorServerApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="7" column="45" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ConnectorProjectDOMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -837,6 +861,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="17" selection-start-column="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tmxmall/connector/ConnectorServerApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="8" column="37" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="37" />
         </state>
       </provider>
     </entry>
