@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tmxmall.connector.dal.mapper.ConnectorRepositoryDOMapper">
+  <resultMap id="BaseResultMap" type="com.tmxmall.connector.dal.entity.ConnectorRepositoryDO">
+    <id column="F_id" jdbcType="INTEGER" property="fId" />
+    <result column="F_enabled" jdbcType="TINYINT" property="fEnabled" />
+    <result column="F_repository_id" jdbcType="VARCHAR" property="fRepositoryId" />
+    <result column="F_repository_name" jdbcType="VARCHAR" property="fRepositoryName" />
+    <result column="F_project_id" jdbcType="VARCHAR" property="fProjectId" />
+    <result column="F_create_time" jdbcType="TIMESTAMP" property="fCreateTime" />
+    <result column="F_modify_time" jdbcType="TIMESTAMP" property="fModifyTime" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    F_id, F_enabled, F_repository_id, F_repository_name, F_project_id, F_create_time, 
+    F_modify_time
+  </sql>
+  <select id="selectByExample" parameterType="com.tmxmall.connector.dal.entity.ConnectorRepositoryDOExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from t_connector_repository
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_connector_repository
+    where F_id = #{fId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_connector_repository
+    where F_id = #{fId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.tmxmall.connector.dal.entity.ConnectorRepositoryDOExample">
+    delete from t_connector_repository
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.tmxmall.connector.dal.entity.ConnectorRepositoryDO">
+    insert into t_connector_repository (F_id, F_enabled, F_repository_id, 
+      F_repository_name, F_project_id, F_create_time, 
+      F_modify_time)
+    values (#{fId,jdbcType=INTEGER}, #{fEnabled,jdbcType=TINYINT}, #{fRepositoryId,jdbcType=VARCHAR}, 
+      #{fRepositoryName,jdbcType=VARCHAR}, #{fProjectId,jdbcType=VARCHAR}, #{fCreateTime,jdbcType=TIMESTAMP}, 
+      #{fModifyTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.tmxmall.connector.dal.entity.ConnectorRepositoryDO">
+    insert into t_connector_repository
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="fId != null">
+        F_id,
+      </if>
+      <if test="fEnabled != null">
+        F_enabled,
+      </if>
+      <if test="fRepositoryId != null">
+        F_repository_id,
+      </if>
+      <if test="fRepositoryName != null">
+        F_repository_name,
+      </if>
+      <if test="fProjectId != null">
+        F_project_id,
+      </if>
+      <if test="fCreateTime != null">
+        F_create_time,
+      </if>
+      <if test="fModifyTime != null">
+        F_modify_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="fId != null">
+        #{fId,jdbcType=INTEGER},
+      </if>
+      <if test="fEnabled != null">
+        #{fEnabled,jdbcType=TINYINT},
+      </if>
+      <if test="fRepositoryId != null">
+        #{fRepositoryId,jdbcType=VARCHAR},
+      </if>
+      <if test="fRepositoryName != null">
+        #{fRepositoryName,jdbcType=VARCHAR},
+      </if>
+      <if test="fProjectId != null">
+        #{fProjectId,jdbcType=VARCHAR},
+      </if>
+      <if test="fCreateTime != null">
+        #{fCreateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fModifyTime != null">
+        #{fModifyTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.tmxmall.connector.dal.entity.ConnectorRepositoryDOExample" resultType="java.lang.Long">
+    select count(*) from t_connector_repository
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update t_connector_repository
+    <set>
+      <if test="record.fId != null">
+        F_id = #{record.fId,jdbcType=INTEGER},
+      </if>
+      <if test="record.fEnabled != null">
+        F_enabled = #{record.fEnabled,jdbcType=TINYINT},
+      </if>
+      <if test="record.fRepositoryId != null">
+        F_repository_id = #{record.fRepositoryId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.fRepositoryName != null">
+        F_repository_name = #{record.fRepositoryName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.fProjectId != null">
+        F_project_id = #{record.fProjectId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.fCreateTime != null">
+        F_create_time = #{record.fCreateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.fModifyTime != null">
+        F_modify_time = #{record.fModifyTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update t_connector_repository
+    set F_id = #{record.fId,jdbcType=INTEGER},
+      F_enabled = #{record.fEnabled,jdbcType=TINYINT},
+      F_repository_id = #{record.fRepositoryId,jdbcType=VARCHAR},
+      F_repository_name = #{record.fRepositoryName,jdbcType=VARCHAR},
+      F_project_id = #{record.fProjectId,jdbcType=VARCHAR},
+      F_create_time = #{record.fCreateTime,jdbcType=TIMESTAMP},
+      F_modify_time = #{record.fModifyTime,jdbcType=TIMESTAMP}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tmxmall.connector.dal.entity.ConnectorRepositoryDO">
+    update t_connector_repository
+    <set>
+      <if test="fEnabled != null">
+        F_enabled = #{fEnabled,jdbcType=TINYINT},
+      </if>
+      <if test="fRepositoryId != null">
+        F_repository_id = #{fRepositoryId,jdbcType=VARCHAR},
+      </if>
+      <if test="fRepositoryName != null">
+        F_repository_name = #{fRepositoryName,jdbcType=VARCHAR},
+      </if>
+      <if test="fProjectId != null">
+        F_project_id = #{fProjectId,jdbcType=VARCHAR},
+      </if>
+      <if test="fCreateTime != null">
+        F_create_time = #{fCreateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fModifyTime != null">
+        F_modify_time = #{fModifyTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where F_id = #{fId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tmxmall.connector.dal.entity.ConnectorRepositoryDO">
+    update t_connector_repository
+    set F_enabled = #{fEnabled,jdbcType=TINYINT},
+      F_repository_id = #{fRepositoryId,jdbcType=VARCHAR},
+      F_repository_name = #{fRepositoryName,jdbcType=VARCHAR},
+      F_project_id = #{fProjectId,jdbcType=VARCHAR},
+      F_create_time = #{fCreateTime,jdbcType=TIMESTAMP},
+      F_modify_time = #{fModifyTime,jdbcType=TIMESTAMP}
+    where F_id = #{fId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByExampleWithRowbounds" parameterType="com.tmxmall.connector.dal.entity.ConnectorRepositoryDOExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from t_connector_repository
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+</mapper>
