@@ -55,7 +55,7 @@ public class TestController {
     @RequestMapping("/connector/github/authorize")
     public void test(HttpServletResponse response) throws IOException {
         response.sendRedirect("https://github.com/login/oauth/authorize?client_id="
-                + clientId + "&scope=" + scope + "&redirect_uri=" + "http://127.0.0.1:8866/connector/github/callBack");
+                + clientId + "&scope=" + scope + "&redirect_uri=" + "http://127.0.0.1:8866/files/github/callBack");
     }
 
     @RequestMapping("/connector/github/callBack")
